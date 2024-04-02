@@ -47,6 +47,11 @@ a {
 }
 
 /* Overall page background */
+body {
+    width: 100vw;
+    height: 100%;
+}
+
 #bigBoy {
     height: 100vh;
     width: 100vw;
@@ -286,4 +291,11 @@ a {
 
 #contentBox:hover::-webkit-scrollbar-thumb {
     background: white;
+}
+
+/* Adding Responsiveness */
+@media screen and (max-width: 800px) {
+    #dumbBox {
+        display: none;
+    }
 }
