@@ -91,3 +91,37 @@ window.addEventListener("resize", urmomgey);
 function meButton() {
     window.open('index.html', '_self');
 }
+
+function centerElement(element) {
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+    console.log(screenHeight, screenWidth);
+
+    // Get the dimensions of the element
+    var elementWidth = element.offsetWidth;
+    var elementHeight = element.offsetHeight;
+    console.log(elementHeight, elementWidth);
+
+    // Calculate the position to center the element
+    var leftOffset = (screenWidth - elementWidth) / 2;
+    var topOffset = (screenHeight - elementHeight) / 2;
+
+    // Set the position of the element
+    element.style.position = 'fixed'; // or 'absolute' depending on your preference
+    element.style.left = leftOffset + 'px';
+    element.style.top = topOffset + 'px';
+}
+
+check = document.getElementById("showMenu");
+menu = document.getElementById("menu-box")
+check.addEventListener('change', function() {
+    if (check.checked) {
+        menu.style.display = 'block';
+        centerElement(menu);
+        menu.style.marginLeft = '1px';
+        menu.style.marginTop = '0px';
+    }
+    else {
+        menu.style.display = 'none';
+    }
+});
