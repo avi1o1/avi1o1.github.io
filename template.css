@@ -298,7 +298,7 @@ nav {
 }
 
 /* Adding Responsiveness */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     #dumbBox {
         display: none;
     }
@@ -317,10 +317,16 @@ nav {
         border-radius: 0;
     }
 
+    #bigBoy {
+        width: 100vw;
+        height: 100vh;
+    }
+
     #contentBox {
         width: 100vw;
         height: 100vh;
-        margin: 13px;
+        margin-left: 13px;
+        padding: 0;
     }
 
     .PCImg {
