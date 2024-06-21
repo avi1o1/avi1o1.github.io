@@ -20,11 +20,11 @@ function blogMode() {
 
 const likeButton = document.getElementById('likeButton');
 const likeCountSpan = document.getElementById('likeCount');
-let comments = JSON.parse(localStorage.getItem('blog3comments')) || [];
+let comments = JSON.parse(localStorage.getItem('blog3comments')) || ["Nice copy-paste!", "I agree!", "urmomgey"];
 let likeCount = localStorage.getItem('blog3likeCount');
 
 if (!likeCount) {
-    likeCount = 0;
+    likeCount = 37;
 }
 
 updateLikeCount();

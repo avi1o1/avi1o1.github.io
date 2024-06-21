@@ -20,11 +20,11 @@ function blogMode() {
 
 const likeButton = document.getElementById('likeButton');
 const likeCountSpan = document.getElementById('likeCount');
-let comments = JSON.parse(localStorage.getItem('blog4comments')) || [];
+let comments = JSON.parse(localStorage.getItem('blog4comments')) || ["Amen, brother!", "Lol, that was one way to put it!", "But what about the other side?"];
 let likeCount = localStorage.getItem('blog4likeCount');
 
 if (!likeCount) {
-    likeCount = 0;
+    likeCount = 420;
 }
 
 updateLikeCount();
