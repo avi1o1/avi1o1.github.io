@@ -1,10 +1,10 @@
 @font-face {
     font-family: "SF Pro";
-    src: url('Resources/sf-pro/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    src: url('../Resources/sf-pro/SFPRODISPLAYREGULAR.OTF') format('opentype');
 }
 @font-face {
     font-family: "Headings";
-    src: url('Resources/sf-pro/SFPRODISPLAYBOLD.OTF') format('opentype');
+    src: url('../Resources/sf-pro/SFPRODISPLAYBOLD.OTF') format('opentype');
 }
 
 * {
@@ -78,7 +78,7 @@ header {
     border-radius: 3px;
     
     background: none;
-    background-image: url("Resources/moon.png");
+    background-image: url("../Resources/moon.png");
     background-size: cover;
 
     border: none;

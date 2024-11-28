@@ -33,8 +33,8 @@ function toggleMode() {
 
     const nameBox = document.getElementById('name');
     const nameImg = isDefaultMode
-        ? 'url("Resources/namie.png")'
-        : 'url("Resources/namie_bw.png")';
+        ? 'url("../Resources/namie.png")'
+        : 'url("../Resources/namie_bw.png")';
     nameBox.style.backgroundImage = nameImg;
     nameBox.classList.add('transition-effect');
 
@@ -47,29 +47,29 @@ function toggleMode() {
 
     const lN = document.getElementById('linkedin');
     const licon = isDefaultMode
-        ? 'url("Resources/white_linkedin.png")'
-        : 'url("Resources/black_linkedin.png")';
+        ? 'url("../Resources/white_linkedin.png")'
+        : 'url("../Resources/black_linkedin.png")';
     lN.style.backgroundImage = licon;
     lN.classList.add('transition-effect');
 
     const gN = document.getElementById('github');
     const gicon = isDefaultMode
-        ? 'url("Resources/white_github.png")'
-        : 'url("Resources/black_github.png")';
+        ? 'url("../Resources/white_github.png")'
+        : 'url("../Resources/black_github.png")';
     gN.style.backgroundImage = gicon;
     gN.classList.add('transition-effect');
 
     const mN = document.getElementById('mail');
     const micon = isDefaultMode
-        ? 'url("Resources/white_mail.png")'
-        : 'url("Resources/black_mail.png")';
+        ? 'url("../Resources/white_mail.png")'
+        : 'url("../Resources/black_mail.png")';
     mN.style.backgroundImage = micon;
     mN.classList.add('transition-effect');
 
     const modeIcon = document.getElementById('changeMode');
     const modic = isDefaultMode
-        ? 'url("Resources/sun.png")'
-        : 'url("Resources/moon.png")';
+        ? 'url("../Resources/sun.png")'
+        : 'url("../Resources/moon.png")';
     modeIcon.style.backgroundImage = modic;
     modeIcon.classList.add('mode-transition-effect');
 

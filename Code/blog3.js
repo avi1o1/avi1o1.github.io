@@ -10,8 +10,8 @@ function blogMode() {
 
     const modeIcon = document.getElementById('changeMode');
     const modic = isDefaultMode
-        ? 'url("Resources/sun.png")'
-        : 'url("Resources/moon.png")';
+        ? 'url("../Resources/sun.png")'
+        : 'url("../Resources/moon.png")';
     modeIcon.style.backgroundImage = modic;
     modeIcon.classList.add('mode-transition-effect');
 
@@ -20,11 +20,11 @@ function blogMode() {
 
 const likeButton = document.getElementById('likeButton');
 const likeCountSpan = document.getElementById('likeCount');
-let comments = JSON.parse(localStorage.getItem('blog4comments')) || ["Amen, brother!", "Lol, that was one way to put it!", "But what about the other side?"];
-let likeCount = localStorage.getItem('blog4likeCount');
+let comments = JSON.parse(localStorage.getItem('blog3comments')) || ["Nice copy-paste!", "I agree!", "urmomgey"];
+let likeCount = localStorage.getItem('blog3likeCount');
 
 if (!likeCount) {
-    likeCount = 420;
+    likeCount = 37;
 }
 
 updateLikeCount();
@@ -52,7 +52,7 @@ function clicked() {
 
     isLiked = !isLiked;
     updateLikeCount();
-    localStorage.setItem('blog4likeCount', likeCount);
+    localStorage.setItem('blog3likeCount', likeCount);
 }
 
 likeButton.addEventListener('click', clicked);
@@ -81,7 +81,7 @@ function postComment() {
   
     if (commentText !== '') {
       comments.push(commentText);
-      localStorage.setItem('blog4comments', JSON.stringify(comments));
+      localStorage.setItem('blog3comments', JSON.stringify(comments));
 
       displayComments();
       commentInput.value = '';

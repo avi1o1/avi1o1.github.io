@@ -7,11 +7,11 @@
 /* Importing Fonts [ SF Pro ] */
 @font-face {
     font-family: "SF Pro";
-    src: url('Resources/sf-pro/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    src: url('../Resources/sf-pro/SFPRODISPLAYREGULAR.OTF') format('opentype');
 }
 @font-face {
     font-family: "Headings";
-    src: url('Resources/sf-pro/SFPRODISPLAYBOLD.OTF') format('opentype');
+    src: url('../Resources/sf-pro/SFPRODISPLAYBOLD.OTF') format('opentype');
 }
 
 /* Setting margin and padding 0 for ease of designing */
@@ -101,7 +101,7 @@ body {
     border-radius: 13px;
     margin: 17px;
 
-    background-image: url("Resources/namie_bw.png");
+    background-image: url("../Resources/namie_bw.png");
     background-size: cover;
 }
 
@@ -220,13 +220,13 @@ body {
 
 /* Linkedin icon image */
 #linkedin {
-    background-image: url("Resources/black_linkedin.png");
+    background-image: url("../Resources/black_linkedin.png");
     background-size: cover;
 }
 
 /* Github icon image */
 #github {
-    background-image: url("Resources/black_github.png");
+    background-image: url("../Resources/black_github.png");
     background-size: cover;
 }
 
@@ -234,7 +234,7 @@ body {
 #mail {
     width: 23px;
 
-    background-image: url("Resources/black_mail.png");
+    background-image: url("../Resources/black_mail.png");
     background-size: cover;
 }
 
@@ -251,7 +251,7 @@ body {
     height: 23px;
     width: 23px;
     background: none;
-    background-image: url("Resources/moon.png");
+    background-image: url("../Resources/moon.png");
     background-size: cover;
     border: none;
     cursor: pointer;

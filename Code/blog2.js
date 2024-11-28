@@ -10,8 +10,8 @@ function blogMode() {
 
     const modeIcon = document.getElementById('changeMode');
     const modic = isDefaultMode
-        ? 'url("Resources/sun.png")'
-        : 'url("Resources/moon.png")';
+        ? 'url("../Resources/sun.png")'
+        : 'url("../Resources/moon.png")';
     modeIcon.style.backgroundImage = modic;
     modeIcon.classList.add('mode-transition-effect');
 
