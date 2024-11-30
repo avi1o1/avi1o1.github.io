@@ -76,18 +76,6 @@ function toggleMode() {
     isDefaultMode = !isDefaultMode;
 }
 
-function urmomgey() {
-    document.getElementById("menu-box").style.marginLeft = window.innerWidth * 0.5 - 578 + "px";
-    document.getElementById("menu-box").style.marginTop = window.innerHeight * 0.5 - 275 + "px";
-    document.getElementById("dumbBox").style.marginLeft = window.innerWidth * 0.5 + 225 + "px";
-    document.getElementById("dumbBox").style.marginTop = window.innerHeight * 0.5 - 400 + "px";
-    document.getElementById("resume").style.marginLeft = window.innerWidth * 0.5 - 297 + "px";
-    document.getElementById("resume").style.marginTop = window.innerHeight * 0.5 + 361 + "px";
-}
-
-urmomgey();
-window.addEventListener("resize", urmomgey);
-
 function meButton() {
     window.open('index.html', '_self');
 }

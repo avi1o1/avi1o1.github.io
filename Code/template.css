@@ -48,7 +48,7 @@ a {
 
 /* Overall page background */
 body {
-    width: 100vw;
+    width: 100%;
     height: 100%;
 }
 
@@ -65,11 +65,13 @@ body {
 
 /* Top-Right Literal-Useless Box */
 #dumbBox {
-    height: 36px;
-    width: 323px;
+    height: 5vw;
+    width: 30vw;
+    max-height: 36px;
+    max-width: 323px;
 
-    margin-left: 61.7vw;
-    margin-top: 9.3vh;
+    margin-left: calc(100vw - (100vw - min(1094px, 90vw) - 4vw)/2 - min(30vw, 323px));
+    margin-top: calc((100vh - min(59vw, 671px))/2 - max(47px, 4vw));
 
     position: absolute;
     z-index: 69;
@@ -81,28 +83,58 @@ body {
 /* Left-Side Menu */
 #menu-box {
     /* The white containing div */
-    height: 672px;
-    width: 249px;
+    height: 59vw;
+    width: 22vw;
+    max-height: 671px;
+    max-width: 249px;
 
-    margin-left: 19vw;
-    margin-top: 21.57vh;
+    margin-left: calc((100vw - min(1094px, 90vw) - 4vw)/2 + 1.3vw);
+    margin-top: calc((100vh - min(59vw, 671px))/2 + max(50px, 3vw));
 
     position: absolute;
     z-index: 69;
 
     border-radius: 17px;
     background-image: linear-gradient(#FFFFFF, #CACACA);
+
+    overflow-y: scroll;
 }
 
+/* Resume Button */
+#resume {
+    height: 36px;
+    width: 30vw;
+    max-width: 257px;
+    min-width: 123px;
+
+    margin-left: calc((100vw - min(1094px, 90vw) - 4vw)/2 + min(22vw, 249px) + 3vw);
+    margin-top: calc((100vh - min(59vw, 671px))/2 + min(59vw, 671px) + max(15px, 1vw));
+
+    position: absolute;
+    z-index: 69;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 17px;
+    background-color: #696969;
+
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: rgba(255, 2555, 255);
+}
 
 /* Name image */
 #name {
     height: 43px;
     border-radius: 13px;
-    margin: 17px;
+    margin: max(1.1vw, 1px);
 
     background-image: url("../Resources/namie_bw.png");
-    background-size: cover;
+    background-size: contain; /* Scale the image to fit the width of the div */
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Menu section heading */
@@ -154,33 +186,13 @@ body {
     width: 216px;
 }
 
-/* Resume Button */
-#resume {
-    height: 36px;
-    width: 257px;
-
-    margin-left: 34vw;
-    margin-top: 87vh;
-
-    position: absolute;
-    z-index: 69;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 17px;
-    background-color: #696969;
-
-    font-size: 0.87rem;
-    font-weight: 500;
-    color: rgba(255, 2555, 255);
-}
-
 /* Main Content Area */
 #bg-box {
-    height: 671px;
-    width: 1094px;
+    height: 59vw;
+    width: 90vw;
+    max-height: 671px;
+    max-width: 1094px;
+    margin-left: 4vw;
 
     position: absolute;
     z-index: 10;
@@ -243,7 +255,7 @@ body {
     justify-self: end;
     align-self: end;
 
-    padding-right: 19px;
+    margin-right: 1vw;
 }
 
 /* Mode change icon */
@@ -260,13 +272,21 @@ body {
 
 /* Content area */
 #contentBox {
-    width: 819px;
-    height: 569px;
+    width: 65.8vw;
+    height: 100vw;
+    max-width: 819px;
+    max-height: 569px;
 
-    margin-left: 248px;
-    margin-top: 16.9px;
+    margin-left: calc(min(22vw, 249px));
+    margin-top: 1vw;
 
     overflow-y: scroll;
+}
+
+.imgFitContainer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Modularising Scrollbar */
@@ -287,6 +307,15 @@ body {
 ::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 6.9px;
+}
+
+#menu-box::-webkit-scrollbar {
+    display: none;
+}
+
+#menu-box {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 #contentBox:hover::-webkit-scrollbar-thumb {

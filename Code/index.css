@@ -11,7 +11,9 @@
 }
 
 .topImg {
-    width: 100%;
+    width: 47vw;
+    max-width: 550px;
+    padding-right: 1vw;
 }
 
 .rightImg {
@@ -22,7 +24,7 @@
 
 .imgBorder {
     border: 4.2px solid white;
-    border-radius: 47px;
+    border-radius: 3vw;
 }
 
 .meText {
